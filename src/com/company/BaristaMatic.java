@@ -7,9 +7,11 @@ import com.company.repository.interfaces.RecipesRepository;
 
 import java.util.*;
 
+import static com.company.Constants.*;
+
 public class BaristaMatic {
 
-    private static final String name = "Barista-matic";
+    private static final String name = MACHINE_NAME;
 
     private final RecipesRepository recipesRepository;
     private final IngredientsRepository ingredientsRepository;
