@@ -5,10 +5,11 @@ import com.company.domain.Recipe;
 import com.company.repository.interfaces.IngredientsRepository;
 import com.company.repository.interfaces.RecipesRepository;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
+
+import static com.company.Constants.*;
 
 public class RecipesRepositoryImpl implements RecipesRepository {
 
@@ -34,7 +35,7 @@ public class RecipesRepositoryImpl implements RecipesRepository {
                 return recipe;
             }
         }
-        return new Recipe("NOT FOUND", Collections.emptyMap());
+        return null;
     }
 
     @Override
@@ -48,45 +49,44 @@ public class RecipesRepositoryImpl implements RecipesRepository {
     }
 
     private void setInitialData() {
-
         addRecipe(new Recipe(COFFEE_NAME, new HashMap<Ingredient, Integer>() {
             {
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.COFFEE_INGR_NAME), 3);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.SUGAR_INGR_NAME), 1);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.CREAM_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(COFFEE_INGR_NAME), 3);
+                put(ingredientsRepository.getIngredientByName(SUGAR_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(CREAM_INGR_NAME), 1);
             }
         }));
         addRecipe(new Recipe(DECAF_COFFEE_NAME, new HashMap<Ingredient, Integer>() {
             {
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.DECAF_COFFEE_INGR_NAME), 3);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.SUGAR_INGR_NAME), 1);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.CREAM_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(DECAF_COFFEE_INGR_NAME), 3);
+                put(ingredientsRepository.getIngredientByName(SUGAR_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(CREAM_INGR_NAME), 1);
             }
         }));
         addRecipe(new Recipe(CAFFE_LATTE_NAME, new HashMap<Ingredient, Integer>() {
             {
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.ESPRESSO_INGR_NAME), 2);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.STEAMED_MILK_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(ESPRESSO_INGR_NAME), 2);
+                put(ingredientsRepository.getIngredientByName(STEAMED_MILK_INGR_NAME), 1);
             }
         }));
         addRecipe(new Recipe(CAFFE_AMERICANO_NAME, new HashMap<Ingredient, Integer>() {
             {
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.ESPRESSO_INGR_NAME), 3);
+                put(ingredientsRepository.getIngredientByName(ESPRESSO_INGR_NAME), 3);
             }
         }));
         addRecipe(new Recipe(CAFFE_MOCHA_NAME, new HashMap<Ingredient, Integer>() {
             {
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.ESPRESSO_INGR_NAME), 1);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.COCOA_INGR_NAME), 1);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.STEAMED_MILK_INGR_NAME), 1);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.WHIPPED_CREAM_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(ESPRESSO_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(COCOA_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(STEAMED_MILK_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(WHIPPED_CREAM_INGR_NAME), 1);
             }
         }));
         addRecipe(new Recipe(CAPPUCCINO_NAME, new HashMap<Ingredient, Integer>() {
             {
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.ESPRESSO_INGR_NAME), 2);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.STEAMED_MILK_INGR_NAME), 1);
-                put(ingredientsRepository.getIngredientByName(IngredientsRepository.FOAMED_MILK_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(ESPRESSO_INGR_NAME), 2);
+                put(ingredientsRepository.getIngredientByName(STEAMED_MILK_INGR_NAME), 1);
+                put(ingredientsRepository.getIngredientByName(FOAMED_MILK_INGR_NAME), 1);
             }
         }));
     }

@@ -4,10 +4,13 @@ import com.company.domain.Ingredient;
 import com.company.domain.Recipe;
 import com.company.repository.interfaces.IngredientsRepository;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import static com.company.Constants.*;
 
 public class IngredientsRepositoryImpl implements IngredientsRepository {
-
 
     private final Set<Ingredient> ingredients;
 
@@ -58,7 +61,7 @@ public class IngredientsRepositoryImpl implements IngredientsRepository {
                 return ingredient;
             }
         }
-        return new Ingredient("NOT FOUND", 0, 0);
+        return null;
     }
 
     @Override

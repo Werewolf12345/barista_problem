@@ -10,17 +10,9 @@ import java.io.InputStreamReader;
 import java.text.NumberFormat;
 import java.util.*;
 
+import static com.company.Constants.*;
+
 public class ConsoleUi {
-
-    private static final String QUIT = "q";
-    private static final String RESTOCK = "r";
-
-    private static final String MENU_HEADER = "Menu:";
-    private static final String INVENTORY_HEADER = "Inventory:";
-
-    private static final String DISPENSING = "Dispensing: ";
-    private static final String OUT_OF_STOCK = "Out of stock: ";
-    private static final String INVALID_SELECTION = "Invalid selection: ";
 
     private final BaristaMatic baristaMatic;
     private List<Recipe> menuList;
